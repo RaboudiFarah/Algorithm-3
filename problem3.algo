@@ -1,0 +1,19 @@
+PROCEDURE insertion_sort (var tab:  ARRAY_OF_INTEGER;)
+VAR
+  i, key, j:INTEGER;
+
+BEGIN
+
+  FOR i FROM 1 TO tab length-1 STEP 1 DO
+    key:=tab[i];
+    j:=i-1;
+  END_FOR
+
+  WHILE (j>=0 and tab[j]>key) DO
+   tab[j+1] =tab[j];
+   j:=j-1;
+  END_WHILE
+
+  tab[j+1]= key;
+  
+END
